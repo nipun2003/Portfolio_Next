@@ -4,23 +4,27 @@ import Main from "@/components/Main";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import { createClient } from "next-sanity";
+import Projects from "@/components/Projects";
 
-export default function Home({profile}) {
+export default function Home({ profile }) {
   return (
     <>
       <Head>
         <title>Home   | Nipun Kumar</title>
       </Head>
       <Nabar />
-      <div className="snap-mandatory snap-y w-full h-screen overflow-y-scroll">
+      <div className="snap-proximity snap-y w-full h-screen overflow-y-scroll">
         <section id="home" className="snap-center">
           <Main profile={profile} />
         </section>
         <section id="about" className="snap-center">
           <About about={profile.about} />
         </section>
-        <section  id="skills" className="snap-center">
+        <section id="skills" className="snap-center">
           <Skills skills={profile.skills} />
+        </section>
+        <section id="projects" className="snap-center">
+          <Projects />
         </section>
       </div>
     </>
@@ -31,7 +35,7 @@ export async function getServerSideProps(context) {
   const client = createClient({
     projectId: "ztwhfnur",
     dataset: "blog",
-    useCdn : false
+    useCdn: false
   })
 
   const query = `*[_type == "profile"][0]`;

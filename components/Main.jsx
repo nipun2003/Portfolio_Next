@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
 const Main = ({ profile }) => {
     return (
-        <div className="w-full h-screen text-center">
+        <div className="w-full h-screen text-center py-20">
             <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
                 <div>
                     <p className="uppercase text-sm tracking-widest text-colorGrayOnBackground">Let&apos;s build something together</p>

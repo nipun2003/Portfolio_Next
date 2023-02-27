@@ -3,4 +3,4 @@ aria-label="Kotlin" role="img"
 viewBox="0 0 512 512"><rect
 width="512" height="512"
 rx="15%"
-fill="#00F15E"/><path fill="#09d" d="M410 410H102V102h154v154"/><path fill="#f80" d="M410 102H256L102 267v143"/></svg>
+fill="#00000000"/><path fill="#09d" d="M410 410H102V102h154v154"/><path fill="#f80" d="M410 102H256L102 267v143"/></svg>
