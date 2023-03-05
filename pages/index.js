@@ -6,7 +6,7 @@ import Skills from "@/components/Skills";
 import { createClient } from "next-sanity";
 import Projects from "@/components/Projects";
 
-export default function Home({ profile }) {
+export default function Home({ profile ,projects}) {
   return (
     <>
       <Head>
@@ -24,7 +24,7 @@ export default function Home({ profile }) {
           <Skills skills={profile.skills} />
         </section>
         <section id="projects" className="snap-center">
-          <Projects />
+          <Projects projects={projects} />
         </section>
       </div>
     </>
@@ -39,10 +39,13 @@ export async function getServerSideProps(context) {
   })
 
   const query = `*[_type == "profile"][0]`;
+  const projectQuery = `*[_type == "project"]`;
   const profile = await client.fetch(query);
+  const projects = await client.fetch(projectQuery);
   return {
     props: {
-      profile: profile
+      profile: profile,
+      projects : projects
     }
   }
 }
