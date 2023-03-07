@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Skill from './Skill'
 
 const About = ({about}) => {
     return (

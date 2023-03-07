@@ -11,7 +11,7 @@ const Navbar = () => {
     setNav(!nav);
   };
   return (
-    <div className="fixed w-full h-20 shadow-xl z-[100]">
+    <div className="fixed w-full h-20 shadow-xl z-[100] bg-colorBackground">
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <div className="relative w-20 h-16">
           <Image src="/assets/navLogo.png" alt="nav logo" layout="fill" />
@@ -24,17 +24,17 @@ const Navbar = () => {
             <Link href="#about">
               <li className="ml-10 text-sm uppercase hover:border-b">About</li>
             </Link>
-            <Link href="#skills">
-              <li className="ml-10 text-sm uppercase hover:border-b">Skills</li>
-            </Link>
             <Link href="#projects">
+              <li className="ml-10 text-sm uppercase hover:border-b">Projects</li>
+            </Link>
+            <Link href="#blogs">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                Projects
+                Blogs
               </li>
             </Link>
             <Link href="#hire">
               <li className="ml-10 text-sm uppercase hover:border-b">
-                Hire Me
+                Contact Me
               </li>
             </Link>
           </ul>
@@ -80,17 +80,17 @@ const Navbar = () => {
               <Link href="/">
                 <li className="py-4 text-sm">Home</li>
               </Link>
-              <Link href="/about">
+              <Link href="#about">
                 <li className="py-4 text-sm">About</li>
               </Link>
-              <Link href="/skills">
-                <li className="py-4 text-sm">Skills</li>
-              </Link>
-              <Link href="/projects">
+              <Link href="#projects">
                 <li className="py-4 text-sm">Projects</li>
               </Link>
+              <Link href="#blogs">
+                <li className="py-4 text-sm">Blogs</li>
+              </Link>
               <Link href="/hire">
-                <li className="py-4 text-sm">Hire Me</li>
+                <li className="py-4 text-sm">Contact Me</li>
               </Link>
             </ul>
             <div className="">

@@ -19,15 +19,15 @@ export default function Home({ profile, projects, blogs }) {
           <Main profile={profile} />
         </section>
         <section id="about" className="md:snap-center w-full md:h-screen">
-          <About about={profile.about} />
+          <About about={profile.about}  />
         </section>
         <section id="skills" className="md:snap-center w-full md:min-h-screen">
           <Skills skills={profile.skills} />
         </section>
-        <section id="projects" className="md:snap-center w-full md:min-h-screen">
+        <section id="projects" className="md:snap-center w-full h-screen">
           <Projects projects={projects} />
         </section>
-        <section id="blogs" className="md:snap-center w-full md:min-h-screen">
+        <section id="blogs" className="md:snap-center w-full h-screen">
           <Blogs blogs={blogs} />
         </section>
       </div>
@@ -43,8 +43,8 @@ export async function getServerSideProps(context) {
   })
 
   const query = `*[_type == "profile"][0]`;
-  const projectQuery = `*[_type == "project"]`;
-  const blogQuery = `*[_type == "blog"]`;
+  const projectQuery = `*[_type == "project"][3]`;
+  const blogQuery = `*[_type == "blog"][3]`;
   const profile = await client.fetch(query);
   const projects = await client.fetch(projectQuery);
   const blogs = await client.fetch(blogQuery);
