@@ -43,8 +43,8 @@ export async function getServerSideProps(context) {
   })
 
   const query = `*[_type == "profile"][0]`;
-  const projectQuery = `*[_type == "project"][3]`;
-  const blogQuery = `*[_type == "blog"][3]`;
+  const projectQuery = `*[_type == "project"]`;
+  const blogQuery = `*[_type == "blog"]`;
   const profile = await client.fetch(query);
   const projects = await client.fetch(projectQuery);
   const blogs = await client.fetch(blogQuery);

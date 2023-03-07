@@ -27,7 +27,7 @@ const Blog = ({ blog }) => {
           </h2>
           <p className="text-colorGrayOnBackground">{blog.metadesc}</p>
         </div>
-        <a className="btn-round-outline whitespace-nowrap">Read More</a>
+        <button>Read More</button>
       </div>
     </div>
   );
